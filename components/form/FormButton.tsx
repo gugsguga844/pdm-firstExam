@@ -16,7 +16,7 @@ type FormInput = {
 export default function FormButton({ title, ...rest }: FormInput) {
   return (
     <TouchableOpacity style={styles.container} {...rest}>
-      <Image style={styles.button} source={require('@/assets/images/carbutton2.png')} resizeMode="contain" />
+      <Image style={styles.button} source={require('@/assets/images/carbutton2.png')} resizeMode="contain"  testID="button-image" />
       <Text style={styles.title}>{title}</Text>
     </TouchableOpacity>
   );

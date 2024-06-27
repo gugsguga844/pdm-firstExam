@@ -33,15 +33,17 @@ export default function index() {
           label="Teste"
           value={username}
           onChangeText={setUsername}
+          testID="input-test"
         />
         <FormInput
           label="Password"
           value={password}
           onChangeText={setPassword}
           secureTextEntry
+          testID="input-password"
         />
 
-        <FormButton onPress={handleLogin} title="Hora de Acelerar!" />
+        <FormButton testID="button" onPress={handleLogin} title="Hora de Acelerar!" />
       </Card>
       
     </FullScreen>

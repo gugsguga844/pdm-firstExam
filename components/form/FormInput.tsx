@@ -11,9 +11,10 @@ import { Spacing } from "@/consts/spacing";
 
 type FormInput = {
   label?: string;
+  testID: string;
 } & TextInputProps;
 
-export default function FormInput({ label, ...rest }: FormInput) {
+export default function FormInput({ label, testID, ...rest }: FormInput) {
   const [focus, setFocus] = useState(false);
 
   return (
@@ -26,6 +27,7 @@ export default function FormInput({ label, ...rest }: FormInput) {
         onFocus={() => setFocus(true)}
         onBlur={() => setFocus(false)}
         style={[styles.input, rest.style]}
+        testID={testID}
       />
     </View>
   );

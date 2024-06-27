@@ -8,3 +8,6 @@ appId: com.lesson-styles-layouts
 - inputText: "123"
 - tapOn:
     id: button-image
+- tapOn: 
+    id: action-button1
+- tapOn: sobre

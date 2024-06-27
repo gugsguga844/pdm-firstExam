@@ -48,7 +48,7 @@ export default function HeaderForHome({
       options={{
         headerShown: true,
         headerRight: () => (
-          <TouchableOpacity onPress={onPress}>
+          <TouchableOpacity onPress={onPress} testID="action-button1">
             <FontAwesome5 name="bars" size={24} color="white" />
           </TouchableOpacity>
         ),

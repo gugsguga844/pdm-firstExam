@@ -1,12 +1,12 @@
 import React from 'react';
 import { render, fireEvent, screen } from '@testing-library/react-native';
-import FormInput from '@/components/form/FormInput'; // ajuste o caminho conforme necessário
+import FormInput from '@/components/form/FormInput';
 import { Colors, Spacing } from '@/consts/colors';
 
 describe('FormInput Component', () => {
   it('Should render correctly with label', () => {
     const { getByText, getByPlaceholderText } = render(
-      <FormInput label="Username" placeholder="Enter your username" />
+      <FormInput label="Username" placeholder="Enter your username" testID="oi" />
     );
 
     // Verifica se o label é renderizado corretamente
@@ -18,7 +18,7 @@ describe('FormInput Component', () => {
 
   it('Should accept and display the value prop', () => {
     const { getByDisplayValue } = render(
-      <FormInput value="test value" />
+      <FormInput value="test value" testID="ola" />
     );
 
     // Verifica se o valor é exibido corretamente
@@ -28,7 +28,7 @@ describe('FormInput Component', () => {
   it('Should call onChangeText when text changes', () => {
     const handleChangeText = jest.fn();
     const { getByPlaceholderText } = render(
-      <FormInput placeholder="Enter text" onChangeText={handleChangeText} />
+      <FormInput placeholder="Enter text" onChangeText={handleChangeText} testID="hello" />
     );
 
     const input = getByPlaceholderText('Enter text');

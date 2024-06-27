@@ -1,0 +1,10 @@
+appId: com.lesson-styles-layouts
+---
+- tapOn: 
+    id: input-test
+- inputText: "teste"
+- tapOn: 
+    id: input-password
+- inputText: "123"
+- tapOn:
+    id: button-image
